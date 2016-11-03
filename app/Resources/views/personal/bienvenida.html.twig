@@ -1,0 +1,31 @@
+{% extends "personal/base.html.twig" %}
+  
+  {% block body %}
+  	<div class="container-fluid">
+  	    <div class="row">
+  	        <div class="col-lg-12">
+  	            <h1 class="page-header">Bienvenido!</h1>
+  	        </div>
+  	        <!-- /.col-lg-12 -->
+  	    </div>
+  	    <!-- /.row -->
+  	</div>
+
+  	<div class="row">
+  	    <div class="col-lg-12">
+  	        <div class="panel panel-default">
+  	            <div class="panel-body">
+  	                <h3>Instrucciones</h3>
+  	                <p>En el menú lateral izquierdo encontrarás las opciones correspondientes a las dos operaciones que puede realizar tu perfil:</p>
+  	                <ol>
+  	                    <li>Préstamo de libros: debes conocer el <strong>id del libro solicitado</strong> y el <strong>email del solicitante</strong></li>
+  	                    <li>Recepción de libros: solo debes de conocer el <strong>id del libro</strong> que se está entregando</li>
+  	                </ol>
+  	                <p>...no te preocupes, el sistema hará las validaciones necesarias :-)</p>
+  	            </div>
+  	        </div>
+  	    </div>
+  	    <!-- /.col-lg-12 -->
+  	</div>
+  	<!-- /.container-fluid -->
+  {% endblock %}

@@ -1,0 +1,94 @@
+{% extends "admin/base.html.twig" %}
+  
+  {% block body %}
+  	<div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Alta de libros</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Alta de un nuevo ejemplar
+                            </div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                      {% if mensaje is defined %}
+                                        <p class="text-success">{{mensaje}}</p>
+                                      {% endif %}
+
+
+
+                                            {{ form_start(form) }}
+                                            <div class="form-group">
+                                              {{ form_label(form.isbn) }}
+                                              {{ form_errors(form.isbn) }}
+                                              {{ form_widget(form.isbn, {'attr':{'class':'form-control'} }) }}
+                                            </div>
+                                            <div class="form-group">
+                                              {{ form_label(form.titulo) }}
+                                              {{ form_errors(form.titulo) }}
+                                              {{ form_widget(form.titulo, {'attr':{'class':'form-control'} }) }}
+                                            </div>
+                                            <div class="form-group">
+                                              {{ form_label(form.autor) }}
+                                              {{ form_errors(form.autor) }}
+                                              {{ form_widget(form.autor, {'attr':{'class':'form-control'} }) }}
+                                            </div>
+                                            <div class="form-group">
+                                              {{ form_label(form.editorial) }}
+                                              {{ form_errors(form.editorial) }}
+                                              {{ form_widget(form.editorial, {'attr':{'class':'form-control'} }) }}
+                                            </div>
+                                            <div class="form-group">
+                                              <label for="libro_anio" class="required">Año</label>
+                                              {{ form_errors(form.anio) }}
+                                              {{ form_widget(form.anio, {'attr':{'class':'form-control'} }) }}
+                                            </div>
+                                            <div class="form-group">
+                                              {{ form_label(form.paginas) }}
+                                              {{ form_errors(form.paginas) }}
+                                              {{ form_widget(form.paginas, {'attr':{'class':'form-control'} }) }}
+                                            </div>
+                                            <div class="form-group">
+                                              {{ form_label(form.ubicacion) }}
+                                              {{ form_errors(form.ubicacion) }}
+                                              {{ form_widget(form.ubicacion, {'attr':{'class':'form-control'} }) }}
+                                            </div>
+                                            
+                                            {% block form_row %}
+                                              {% spaceless %}
+                                                
+                                                <button type="submit" class="btn btn-primary btn-lg btn-block">Registrar</button>
+                                              {% endspaceless %}
+                                            {% endblock form_row %}
+                                            {{ form_end(form) }}
+
+                                           
+
+                                    </div>
+                                    <!-- /.col-lg-6 (nested) -->
+                                    
+                                    <!-- /.col-lg-6 (nested) -->
+
+
+                                </div>
+                                <!-- /.row (nested) -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+
+            </div>
+            
+            <!-- /.container-fluid -->
+  {% endblock %}
